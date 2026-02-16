@@ -2,7 +2,8 @@ from telegram import Update
 from telegram.ext import ApplicationBuilder, MessageHandler, CommandHandler, filters, ContextTypes
 
 import os
-TOKEN = os.getenv("TOKEN")
+TOKEN = os.environ.get("BOT_TOKEN")
+print("TOKEN VALUE:", TOKEN)
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("ติดต่อสอบถาม @Dok_tong")
@@ -72,5 +73,6 @@ app.add_handler(
 )
 app.add_handler(CommandHandler("rules", rules))
 app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, roast))
+
 
 app.run_polling()
