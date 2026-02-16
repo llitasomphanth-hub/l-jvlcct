@@ -76,7 +76,7 @@ app.add_handler(CommandHandler("rules", rules))
 app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, roast))
 
 app.run_polling()
-=======
+
 from telegram import Update
 from telegram.ext import ApplicationBuilder, MessageHandler, CommandHandler, filters, ContextTypes
 
