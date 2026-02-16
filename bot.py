@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 from telegram import Update
 from telegram.ext import ApplicationBuilder, MessageHandler, CommandHandler, filters, ContextTypes
 
@@ -155,4 +155,3 @@ app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, roast))
 
 
 app.run_polling()
->>>>>>> dc6383b6dc11f7db3fdb7b18cd2c5a04f14ba671
